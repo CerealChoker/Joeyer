@@ -62,10 +62,10 @@ static MasterAccessor MasterAccess(&viewer, &RWINdow);
 
 
 //float WindowInfluence::InfluencePercantage = 79.f;
+
+/** < declaring static variables for BaseManager */]
 sf::RenderWindow * BaseManager::WINdow = &RWINdow;
 sf::View * BaseManager::viewerp = &viewer;
-
-/** < declaring static variables for BaseManager */
 std::vector<sf::Font> BaseManager::Fonts;
 ResourceHolder<sf::Texture, Textures::ID> BaseManager::Res_Texture;
 
