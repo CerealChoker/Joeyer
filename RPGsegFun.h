@@ -23,7 +23,7 @@ class OverWorld : public BaseManager
     void Calculation();
     void RemoveFalsers();
     void EmptyArrays();
-    ///This is for the TextList array, if true the finished first element will be removed
+    
     bool ready;
     ///event handling
     int eventer;
@@ -44,6 +44,7 @@ class OverWorld : public BaseManager
     GroupRiseUp RU[3];
 
     MasterText MArr[3];
+    ///This is for the TextList array, if true the finished first element will be removed
     std::list <MasterText> TextList;
 
     Box Boxy;
