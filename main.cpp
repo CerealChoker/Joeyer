@@ -136,7 +136,7 @@ int WinMain (HINSTANCE hThisInstance,HINSTANCE hPrevInstance,LPSTR lpszArgument,
         RWINdow.clear(sf::Color(0, 0 , 0 , 0));
         //MouseHandle.update();
 	    
-	//It works here :0 
+	//drawing works here but not in RPGsegFun.cpp
         sf::RectangleShape S(sf::Vector2f(20, 20));
         S.setFillColor(sf::Color::Red);
         S.setPosition(300, 300);
