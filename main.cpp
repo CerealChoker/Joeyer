@@ -1,11 +1,7 @@
 #include <SFML/Graphics.hpp>
 #include <SFML/OpenGL.hpp>
 #include <SFML/OpenGL.hpp>
-//#include <SFML/RWINdow.hpp>
-
-#include <GL/glu.h>
-#include <GL/gl.h>
-//#include <GL/glut.h>
+#include <SFML/WINdow.hpp>
 
 
 
@@ -86,8 +82,6 @@ LRESULT CALLBACK WindowProcedure (HWND, UINT, WPARAM, LPARAM);
 
 int WinMain (HINSTANCE hThisInstance,HINSTANCE hPrevInstance,LPSTR lpszArgument,int nCmdShow)
 {
-    BaseManager::WINdow = &RWINdow;
-    FileFun F;
     StateStatusHandler StatusAccessor;
     StatusAccessor.TheLevels.push_back(new TowerDefenseTest);
     StatusAccessor.TheLevels.push_back(new OverWorld);
@@ -98,7 +92,6 @@ int WinMain (HINSTANCE hThisInstance,HINSTANCE hPrevInstance,LPSTR lpszArgument,
         wincl -> hInstance = hThisInstance;
         wincl -> style = CS_SAVEBITS;
         wincl -> hIconSm = (HICON)LoadImage(GetModuleHandle(NULL), MAKEINTRESOURCE(IDI_ICON), IMAGE_ICON, 128,128,0);
-        //WindowHandlier.HWNDer = RWINdow.getSystemHandle();
     }
     /**Set Icon to game window */
     {
@@ -142,9 +135,12 @@ int WinMain (HINSTANCE hThisInstance,HINSTANCE hPrevInstance,LPSTR lpszArgument,
         RWINdow.setView(viewer);
         RWINdow.clear(sf::Color(0, 0 , 0 , 0));
         //MouseHandle.update();
+	    
+	//It works here :0 
         sf::RectangleShape S(sf::Vector2f(20, 20));
         S.setFillColor(sf::Color::Red);
         S.setPosition(300, 300);
+	RWINdow.draw(S);
         //RWINdow.draw(MouseHandle.Dot);
         StatusAccessor.Declare();
         StatusAccessor.Calculate();
