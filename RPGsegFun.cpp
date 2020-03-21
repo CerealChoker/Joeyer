@@ -149,6 +149,7 @@ void OverWorld::DrawEntities()
 {
     sf::RectangleShape S(sf::Vector2f(20, 20));
     S.setFillColor(sf::Color::Red);
+    ///This does not work :/ and also every other draw call here
     WINdow -> draw(S);
     viewerp->move(.1f,0);
     //WINdow ->clear();
